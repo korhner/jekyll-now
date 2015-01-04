@@ -33,3 +33,5 @@ social:
     
 email: korhner@gmail.com
 about: "I am a software developer from Serbia with a passion in backend programming and technologies."
+
+highlighter: pygments
