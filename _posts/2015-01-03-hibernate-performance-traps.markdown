@@ -4,7 +4,7 @@ title: "Performance Traps in Hibernate"
 date: 2015-01-03 16:54:46
 categories:
 - Hibernate
-published: false
+published: true
 ---
 Hibernate is the most popular Object-Relational Mapping (ORM) library for Java. 
 It provides a framework for mapping object-oriented domain models to the underlying relational database and also generates SQL for retrieving and persisting the data.
@@ -55,7 +55,7 @@ public class Mail {
 It is a basic one-to-many relationship, modelling users that have a list of mails. 
 Now, suppose we have a "mark all as read" button that goes through all user's mail and marks unread ones as read.
 A common approach would be:
-{% highlight Java %}
+{% highlight java %}
 User user = getCurrentUser();
 for( Mail mail : user.getMail() ) {
 	if( !mail.isRead() ) {
@@ -82,7 +82,7 @@ Hibernate can be inefficient with big data and we need to get our hands dirty in
 
 One way of doing this is to create a named query through User class annotation and add a method to execute the query:
 
-{% highlight Java %}
+{% highlight java %}
 @NamedQueries({ @NamedQuery(name = "markMailAsRead", query = "UPDATE mails SET read = true WHERE user_id = :userId") })
 public class User {
 	/** ... */
