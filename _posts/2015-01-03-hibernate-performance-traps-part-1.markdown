@@ -4,7 +4,7 @@ title: "Performance Traps in Hibernate - Part 1"
 date: 2015-01-03 16:54:46
 categories:
 - Hibernate
-published: false
+published: true
 ---
 Hibernate is the most popular Object-Relational Mapping (ORM) library for Java. 
 It provides a framework for mapping object-oriented domain models to the underlying relational database and also generates SQL for retrieving and persisting the data.
@@ -110,7 +110,7 @@ Comparison with 5000 unread mails:
 | Method    | Memory footprint | Number of queries                           | Duration |
 |-----------|------------------|---------------------------------------------|----------|
 | Naive     | All user's mail  | 1 SELECT and 1 UPDATE for every unread mail | 404 ms   |
-| Efficient | None             | $12                                         | 45 ms    |
+| Efficient | None             | 1 UPDATE                                    | 45 ms    |
 
 
 The benefits are huge (almost 10 times faster and without loading a single unneeded object from database) and will grow proportional to number of mails the user has.

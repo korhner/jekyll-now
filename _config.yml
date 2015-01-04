@@ -35,3 +35,7 @@ email: korhner@gmail.com
 about: "I am a software developer from Serbia with a passion in backend programming and technologies."
 
 highlighter: pygments
+# Your disqus shortname, entering this will enable commenting on posts
+disqus: korhner
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-58201648-1
