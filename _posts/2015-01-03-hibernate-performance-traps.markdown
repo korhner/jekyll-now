@@ -4,6 +4,7 @@ title: "Performance Traps in Hibernate"
 date: 2015-01-03 16:54:46
 categories:
 - Hibernate
+published: false
 ---
 Hibernate is the most popular Object-Relational Mapping (ORM) library for Java. 
 It provides a framework for mapping object-oriented domain models to the underlying relational database and also generates SQL for retrieving and persisting the data.
