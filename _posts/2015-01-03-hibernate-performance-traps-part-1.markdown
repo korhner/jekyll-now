@@ -114,3 +114,4 @@ Comparison with 5000 unread mails:
 
 
 The benefits are huge (almost 10 times faster and without loading a single unneeded object from database) and will grow proportional to number of mails the user has.
+The problem with this approach is that the query will not affect in-memory state of the objects and it is recommended to reload the objects in a new transaction when needed.
