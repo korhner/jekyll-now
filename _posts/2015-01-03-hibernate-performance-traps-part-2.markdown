@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "Performance Traps in Hibernate - Part 2"
-date: 2015-01-06 16:54:46
+date: 2015-01-07 16:54:46
 categories:
 - Hibernate
-published: false
+published: true
 ---
 
-In case you missed the previous article <insert>, I really recommend to read it. The series are best followed when read in order and each will contain one common problem with proposed solutions with pros and cons.
+In case you missed the previous [article]({% post_url 2015-01-03-hibernate-performance-traps-part-1 %}), I really recommend to read it. 
+The series are best followed when read in order and each will contain one common problem with proposed solutions, measured evidence and pros/cons of the solutions.
 I talked about one possible performance trap using hibernate and that was how to update a large number of objects in a loop which can cause severe performance drops and large memory overhead if done wrong.
 In this post, we will tackle a similar requirement - how to achieve best performance when inserting a large number of records.<!--more-->
 
