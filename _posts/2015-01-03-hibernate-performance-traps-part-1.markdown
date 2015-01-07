@@ -61,14 +61,20 @@ It is a basic one-to-many relationship, modelling users that have a list of mail
 Now, suppose we have a "mark all as read" button in our applications that goes simply marks all mail as read in one step.
 A common approach to accomplish this would be:
 {% highlight java %}
+Session session = sessionFactory.openSession();
+Transaction tx = session.beginTransaction();
+
 User user = getCurrentUser();
 
 for( Mail mail : user.getMail() ) {
   if( !mail.isRead() ) {
     mail.setIsRead(true);
-    mail.update();
+    session.update(mail);
   }
 }
+
+tx.commit();
+session.close();
 {% endhighlight %}
 
 If we look at queries Hibernate generated, we would notice:
@@ -114,4 +120,5 @@ Comparison with 5000 unread mails:
 
 
 The benefits are huge (almost 10 times faster and without loading a single unneeded object from database) and will grow proportional to number of mails the user has.
-The problem with this approach is that the query will not affect in-memory state of the objects and it is recommended to reload the objects in a new transaction when needed.
+The problem with this approach is that the query will not affect in-memory state of the objects and it is recommended to reload the objects in a new session or execute such bulk operations in the beginning of a session before persistence cache caches any of affected objects.
+You also lose some of the benefits Hibernate provides such as optimistic locking so better make sure you have enough data to justify it. This is best to be done when optimizing your code and profiling for bottlenecks as premature unneeded optimization is often a common source of problems.
