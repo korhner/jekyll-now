@@ -3,7 +3,6 @@
 # Site settings
 title: Ivan Korhner's Programming Blog
 description: "Thoughts About Various Backend Development Topics."
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
 url: "http://korhner.github.io"
 
