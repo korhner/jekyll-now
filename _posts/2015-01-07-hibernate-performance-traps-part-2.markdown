@@ -10,6 +10,7 @@ published: true
 #### List of all articles in this series:
 * [Part 1 - One by One Processing]({% post_url 2015-01-03-hibernate-performance-traps-part-1 %})
 * Part 2 - Batch Insert
+* [Part 3 - HiLo id allocation]({% post_url 2015-01-11-hibernate-performance-traps-part-3 %})
 
 In case you missed the previous [article]({% post_url 2015-01-03-hibernate-performance-traps-part-1 %}), I really recommend to read it. 
 The series are best followed when read in order and each will contain one common problem with proposed solutions, measured evidence and pros/cons of the solutions.
@@ -191,3 +192,4 @@ I will talk about that in the next part so stay tuned!
 #### List of all articles in this series:
 * [Part 1 - One by One Processing]({% post_url 2015-01-03-hibernate-performance-traps-part-1 %})
 * Part 2 - Batch Insert
+* [Part 3 - HiLo id allocation]({% post_url 2015-01-11-hibernate-performance-traps-part-3 %})

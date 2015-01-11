@@ -9,6 +9,7 @@ published: true
 #### List of all articles in this series:
 * Part 1 - One by One Processing
 * [Part 2 - Batch Insert]({% post_url 2015-01-07-hibernate-performance-traps-part-2 %})
+* [Part 3 - HiLo id allocation]({% post_url 2015-01-11-hibernate-performance-traps-part-3 %})
 
 Hibernate is the most popular Object-Relational Mapping (ORM) library for Java. 
 It provides a framework for mapping object-oriented domain models to the underlying relational database and also generates SQL for retrieving and persisting the data.
@@ -130,3 +131,4 @@ You also lose some of the benefits Hibernate provides such as optimistic locking
 #### List of all articles in this series:
 * Part 1 - One by One Processing
 * [Part 2 - Batch Insert]({% post_url 2015-01-07-hibernate-performance-traps-part-2 %})
+* [Part 3 - HiLo id allocation]({% post_url 2015-01-11-hibernate-performance-traps-part-3 %})
