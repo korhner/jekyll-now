@@ -4,7 +4,6 @@ title: "Performance Traps in Hibernate - Part 2"
 date: 2015-01-07 16:54:46
 categories:
 - Hibernate
-- Java
 published: true
 ---
 
