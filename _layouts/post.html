@@ -4,10 +4,23 @@ layout: default
 
 {% include wrap.html %}
 
+		
 <div class="container mtb">
     <div class="row">
         <! -- SINGLE POST -->
         <div class="col-lg-8">
+		
+			<!-- Google adsense -->
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Leaderboard ad -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:728px;height:90px"
+				 data-ad-client="ca-pub-8654065376621022"
+				 data-ad-slot="6242018192"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		
             <! -- Blog Post  -->
             <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
             <p><csmall>{{ page.date | date: "%b %-d, %Y" }}.</csmall></p>
