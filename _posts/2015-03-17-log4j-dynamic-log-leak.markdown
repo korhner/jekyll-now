@@ -17,6 +17,7 @@ First thing we did was we took a heap dump and looked at most frequent instances
 ## Hunting the memory leak
 
 We started to try to isolate the problem and found a possible red flag - for every client that connected, we generated a new logger containing class name and IP address of the client.
+Is it possible that log4j loggers are kept in memory forever and never removed?
 It was very easy to set up an experiment to test the hypothesis. I created a minimal piece of code that created a lot of dynamically named loggers and attached a profiler to it.
 For this simple case, Java VisualVM, which comes with Java is more that enough.
 
