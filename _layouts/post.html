@@ -24,17 +24,23 @@ layout: default
             <! -- Blog Post  -->
             <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
             <p><csmall>{{ page.date | date: "%b %-d, %Y" }}.</csmall></p>
-              
+            
+			<hr />
+			 <p class="share">
+                <a href="http://www.facebook.com/sharer.php?u={{ page.url | prepend: site.url }}"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/home/?status= {{page.title}} {{ page.url | prepend: site.url }} via @IvanKorhner" _target="blank"><i class="fa fa-twitter"></i></a>	 		
+            </p>
+			<hr />
+			
             {{ content }}
 
             <div class="spacing"></div>
-            <!-- <h6>SHARE:</h6>
-            <p class="share">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-tumblr"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
-            </p> -->
+            <hr />
+			 <p class="share">
+                <a href="http://www.facebook.com/sharer.php?u={{ page.url | prepend: site.url }}"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/home/?status= {{page.title}} {{ page.url | prepend: site.url }} via @IvanKorhner" _target="blank"><i class="fa fa-twitter"></i></a>	 		
+            </p>
+			<hr />
         </div><! --/col-lg-8 -->
         
         {% include sidebar.html %}

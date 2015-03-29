@@ -14,6 +14,10 @@ permalink: /
                 <! -- Blog Post -->
                 <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <p><csmall>{{ post.date | date: "%b %-d, %Y" }}.</csmall></p>
+				<p class="share">
+                <a href="http://www.facebook.com/sharer.php?u={{ post.url | prepend: site.url }}"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/home/?status= {{post.title}} {{ post.url | prepend: site.url }} via @IvanKorhner" _target="blank"><i class="fa fa-twitter"></i></a>	 		
+				</p>
                 {{ post.excerpt }}
                 <p><a href="{{ post.url | prepend: site.baseurl }}">[Read More]</a></p>
                 <div class="hline"></div>
